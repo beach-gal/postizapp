@@ -1,0 +1,44 @@
+{
+  "name": "postiz-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "dotenv -e ../../.env -- nest start --watch --entryFile src/main",
+    "build": "cross-env NODE_ENV=production nest build",
+    "start": "dotenv -e ../../.env -- node ./dist/apps/backend/src/main.js",
+    "pm2": "pm2 start pnpm --name backend -- start"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.11",
+    "@nestjs/core": "^11.1.11",
+    "@nestjs/platform-express": "^11.1.11",
+    "@nestjs/swagger": "^7.3.0",
+    "@prisma/client": "6.5.0",
+
+    "@sentry/nestjs": "9.47.1",
+    "@sentry/node": "7.120.4",
+    "@sentry/integrations": "7.120.4",
+    "@sentry/profiling-node": "7.120.4",
+    "@sentry/utils": "7.120.4",
+    "@sentry/types": "7.120.4",
+    "@sentry/core": "7.120.4",
+
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv-cli": "^11.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.14",
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "postiz-extension",
+  "version": "1.0.3",
+  "private": true,
+  "scripts": {
+    "dev": "rimraf dist && dotenv -e ../../.env -- vite build --config vite.config.chrome.ts --mode development --watch",
+    "build": "rimraf dist && dotenv -e ../../.env -- vite build --config vite.config.chrome.ts --mode production",
+    "lint": "eslint . --ext .ts,.tsx --fix"
+  },
+  "dependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.32",
+    "@vitejs/plugin-react": "^4.2.0",
+    "dotenv": "^16.5.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "5.5.4"
+  }
+}
